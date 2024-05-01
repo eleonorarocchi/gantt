@@ -319,6 +319,10 @@ export default class Gantt {
     while (cur_date === null || cur_date < this.gantt_end) {
       if (!cur_date) {
         cur_date = date_utils.clone(this.gantt_start);
+        if (this.view_is([VIEW_MODE.WEEK])) {
+          const toBeRelegated = (new Date(cur_date.getTime() + (6000 * 60 * 60 * 24))) % 7;
+          cur_date.setDate((new Date(cur_date.getTime() + ((-toBeRelegated*1000) * 60 * 60 * 24))));
+        }
       } else {
         if (this.view_is(VIEW_MODE.YEAR)) {
           cur_date = date_utils.add(cur_date, 1, "year");
