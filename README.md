@@ -18,7 +18,7 @@
 ### Install
 
 ```
-npm install frappe-gantt
+npm install frappe-gantt-weekly
 ```
 
 ### Usage
@@ -115,4 +115,4 @@ License: MIT
 
 ---
 
-Project maintained by [frappe](https://github.com/frappe)
+Project started by [frappe](https://github.com/frappe)
